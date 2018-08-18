@@ -38,7 +38,7 @@ li {
 };
 
 .cutter-fish {
-    width: 250px;
+    width: 1000px;
     margin: 60px;
 };
 
@@ -66,4 +66,9 @@ li {
 .fish-shirt {
     width: 250px;
     margin: 30px;
+};
+
+div {
+    display: inline-block;
+    margin: 100px;
 };

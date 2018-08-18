@@ -43,19 +43,6 @@ new Bakery('Seattle Center', 11, 38, 2.3);
 new Bakery('Capitol Hill', 20, 38, 2.3);
 new Bakery('Alki', 2, 16, 4.6);
 
-// pike.calcDailyCookieTotal();
-// seaTac.calcDailyCookieTotal();
-// seattleCenter.calcDailyCookieTotal();
-// capitolHill.calcDailyCookieTotal();
-// alki.calcDailyCookieTotal();
-
-// console.table(storeLocations);
-// console.log(pike);
-// console.log(seaTac);
-// console.log(seattleCenter);
-// console.log(capitolHill);
-// console.log(alki);
-
 Bakery.prototype.render = function() {
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
@@ -104,7 +91,7 @@ function displaySales() {
 
   for(var i = 0; i < storeLocations.length; i++){
     storeLocations[i].render();
-    // console.log(storeLocations[i]);
+    console.log(storeLocations[i]);
   }
 }
 // creates footer row
@@ -133,16 +120,17 @@ function createFooter() {
   console.log(grandTotal);
 }
 
-// function displayHourlySales() {
-for(var i = 0; i < hoursOpen.length; i++) {
+function displayHourlySales() {
+  for(var i = 0; i < hoursOpen.length; i++) {
 
-  footerTotals[i] = 0;
-  for(var j = 0; j < storeLocations.length; j++) {
-    footerTotals[i] += storeLocations[j].cookiesPerHour[i];
-    // console.log(footerTotals);
+    footerTotals[i] = 0;
+    for(var j = 0; j < storeLocations.length; j++) {
+      footerTotals[i] += storeLocations[j].cookiesPerHour[i];
+      console.log(footerTotals);
+    }
   }
-
 }
+
 function newBakerySubmit (event) {
   event.preventDefault();
 
@@ -152,43 +140,30 @@ function newBakerySubmit (event) {
   var newAvg = parseInt(event.target.avgCookiesPerCustomer.value);
   new Bakery (newName, newMin, newMax, newAvg);
 
-  // console.table(storeLocations);
-  // console.log('newMin', isNaN(newMin));
-  // console.log('newMax', isNaN(newMax));
-  // console.log('newAvg', newAvg);
-  // console.log(storeLocations[storeLocations.length-1]);
-
-  // newBakery.render();
+  console.table(storeLocations);
+  console.log('newMin', isNaN(newMin));
+  console.log('newMax', isNaN(newMax));
+  console.log('newAvg', newAvg);
+  console.log(storeLocations[storeLocations.length-1]);
 
   event.target.newLocation.value = null;
   event.target.minimumCustomers.value = null;
   event.target.maximumCustomers.value = null;
   event.target.avgCookiesPerCustomer.value = null;
 
-  // cookieForm.innerHTML = '';
-
   patTable.innerHTML = '';
   makeHeaderRow();
   displaySales();
+  displayHourlySales();
   createFooter();
   console.log(storeLocations[storeLocations.length-1]);
   console.log(storeLocations[storeLocations.length-2]);
   console.log(storeLocations[storeLocations.length-3]);
-
 
 }
 
 cookieForm.addEventListener('submit', newBakerySubmit);
 makeHeaderRow();
 displaySales();
+displayHourlySales();
 createFooter();
-
-// updateForm.addEventListener('submit', function() {
-//   // Empties form
-//   cookieForm.innerHTML = '';
-
-//   patTable.innerHTML = '';
-//   makeHeaderRow();
-//   displaySales();
-//   createFooter();
-// });

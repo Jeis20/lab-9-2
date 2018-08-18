@@ -96,11 +96,15 @@ function makeHeaderRow() {
 // displays sales
 function displaySales() {
   for (i = 0; i < storeLocations.length; i++) {
-    storeLocations[i].calcDailyCookieTotal();
+
+    if (storeLocations[i].dailyCookieTotal === 0) {
+      storeLocations[i].calcDailyCookieTotal();
+    }
   }
 
   for(var i = 0; i < storeLocations.length; i++){
     storeLocations[i].render();
+    // console.log(storeLocations[i]);
   }
 }
 // creates footer row
@@ -110,7 +114,6 @@ function createFooter() {
   thEl.textContent = 'Hourly Totals';
   trEl.appendChild(thEl);
   patTable.appendChild(trEl);
-  // console.log(createFooter);
 
   for (var i = 0; i < hoursOpen.length; i++) {
     var tdEl = document.createElement('td');
@@ -127,7 +130,7 @@ function createFooter() {
   grandTotalEl.textContent = grandTotal;
   trEl.appendChild(grandTotalEl);
   patTable.appendChild(trEl);
-
+  console.log(grandTotal);
 }
 
 // function displayHourlySales() {
@@ -170,6 +173,7 @@ function newBakerySubmit (event) {
   createFooter();
   console.log(storeLocations[storeLocations.length-1]);
   console.log(storeLocations[storeLocations.length-2]);
+  console.log(storeLocations[storeLocations.length-3]);
 
 
 }

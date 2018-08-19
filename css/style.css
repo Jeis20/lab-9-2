@@ -35,40 +35,60 @@ li {
 .chinook-fish {
     width: 250px;
     margin: 30px;
-};
+}
 
 .cutter-fish {
     width: 1000px;
+    height: 1000px;
     margin: 60px;
-};
+}
 
 
 .rainbow-fish {
     width: 250px;
     margin: 30px;
-};
+}
 
 .family-photo {
     width: 100px;
     margin: 90px;
-};
+}
 
 .frosted-cookie-fish {
     width: 250px;
     margin: 30px;
-};
+}
 
 .salmon {
     width: 250px;
     margin: 30px;
-};
+}
 
 .fish-shirt {
     width: 250px;
     margin: 30px;
-};
+}
 
 div {
-    display: inline-block;
     margin: 100px;
-};
+}
+
+table {
+    border: 1px solid black;
+    width: 300px;
+}
+
+td {
+    width: 300px;
+    padding: 10px;
+    color: white;
+    border:black;
+}
+
+th {
+    color: white;
+    padding: 10px;
+}
+
+
+

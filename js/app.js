@@ -137,7 +137,7 @@ function newBakerySubmit (event) {
   var newName = event.target.newLocation.value;
   var newMin = parseInt(event.target.minimumCustomers.value);
   var newMax = parseInt(event.target.maximumCustomers.value);
-  var newAvg = parseInt(event.target.avgCookiesPerCustomer.value);
+  var newAvg = parseFloat(event.target.avgCookiesPerCustomer.value);
   new Bakery (newName, newMin, newMax, newAvg);
 
   console.table(storeLocations);

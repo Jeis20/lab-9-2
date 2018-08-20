@@ -97,11 +97,11 @@ li {
 }
 
 div {
-    margin: 100px;
+    margin: 40px;
 }
 
 table {
-    border: 1px solid black;
+    border: 2px solid black;
     width: 300px;
 }
 
@@ -117,5 +117,16 @@ th {
     padding: 10px;
 }
 
+#cookie-form {
+    display: inline-block;
+    padding: 20px;
+}
 
+fieldset {
+    padding: 10px;
+}
 
+label {
+    display: inline-block;
+    padding: 10px;
+}

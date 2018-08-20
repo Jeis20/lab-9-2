@@ -6,6 +6,7 @@ body {
     background-color: rgb(50, 119, 221);
 }
 
+/* Pat's Salmon Cookies */
 h1 {
     background-color:rgb(221, 66, 66);
     margin: 10px;
@@ -15,58 +16,84 @@ h1 {
     font-size: 40px;    
 }
 
+/* Salmon Cookie Locations */
+
 h2 {
-    padding: 3px;
+    text-emphasis-color: black;
+    text-decoration: underline;
+    font-size: 30px;
+    padding: 10px;
 }
 
+/* store hours and location */
 h3 {
-    padding: 3px;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: underline;
 }
 
 ul {
-    padding: 3px;
+    padding: -3px;
 }
 
+/* store locations and addresses */
 li {
     margin: 3px;
-    padding: 1px;
-}
-
-.chinook-fish {
-    width: 250px;
-    margin: 30px;
-}
-
-.cutter-fish {
-    width: 1000px;
-    height: 1000px;
-    margin: 60px;
-}
-
-
-.rainbow-fish {
-    width: 250px;
-    margin: 30px;
+    padding: 8px;
+    color: white;
 }
 
 .family-photo {
-    width: 100px;
-    margin: 90px;
+    position: relative;
+    left: 35%;
+    top: -300px;
+    width: 26%;
+}
+
+.chinook-fish {
+    position: relative;
+    width: 250px;
+    margin: 30px;
+    top: -50px;
+}
+
+.cutter-fish {
+    position: relative;
+    left: 78%;
+    top: -660px;
+    width: 10%;
+
+}
+
+.rainbow-fish {
+    position: relative;
+    left: 150px;
+    top: -300px;
+    width: 215px;
+    margin: 30px;
 }
 
 .frosted-cookie-fish {
-    width: 250px;
+    position: relative;
+    left: -400px;
+    top: -300px;
+    width: 185px;
     margin: 30px;
 }
 
 .salmon {
-    width: 250px;
-    margin: 30px;
+    position: relative;
+    left: 25%;
+    top: -250px;
+    width: 30%;
 }
 
 .fish-shirt {
-    width: 250px;
-    margin: 30px;
+    position: relative;
+    left: 20%;
+    top: -75px;
+    width: 15%;
 }
 
 div {
